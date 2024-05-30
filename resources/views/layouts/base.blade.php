@@ -179,7 +179,7 @@
                                             <ul>
                                                 @if(Route::has('login'))
                                                     @auth
-                                                        @if(Auth::user()-> utype === 'ADM')
+                                                        @if(Auth::user()->utype === 'ADM')
                                                             <li>
                                                                 <a href="{{route('admin.index')}}" class="d-block">Dashboard</a>
                                                             </li>

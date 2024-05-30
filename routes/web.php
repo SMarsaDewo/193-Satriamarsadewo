@@ -19,13 +19,13 @@ Route::delete('/cart/clear',[CartController::class, 'clearCart'])->name('cart.cl
 
 
 
-Auth::routes();
+Auth::routes(); 
 
 Route::middleware('auth')->group(function(){
     Route::get('/my-account',[UserController::class,'index'])->name('user.index');
 });
 
-Route::middleware(['auth','auth.admin'])->group(function(){
+Route::middleware(['auth','admin'])->group(function(){
     Route::get('/admin',[AdminController::class,'index'])->name('admin.index');
 });
 
